@@ -17,12 +17,13 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div style={{
+    <div
+      style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        backgroundColor: "peachpuff"
+        backgroundColor: "peachpuff",
       }}
     >
       <div
@@ -34,7 +35,9 @@ const Login = ({ onLogin }) => {
           borderRadius: "8px",
         }}
       >
-        <h2 style={{ textAlign: "center", marginBottom: "20px", color:"black" }}>LOGIN</h2>
+        <h2 style={{ textAlign: "center", marginBottom: "20px", color: "black" }}>
+          LOGIN
+        </h2>
         <div style={{ marginBottom: "15px" }}>
           <input
             type="text"
@@ -42,13 +45,12 @@ const Login = ({ onLogin }) => {
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
             style={{
-              width: "100%",
+              width: "93%",
               padding: "10px",
               fontSize: "14px",
               borderRadius: "4px",
               border: "1px solid #ddd",
-              width: "275px",
-              backgroundColor: "aliceblue"
+              backgroundColor: "aliceblue",
             }}
           />
         </div>
@@ -59,13 +61,12 @@ const Login = ({ onLogin }) => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             style={{
-              width: "100%",
+              width: "93%",
               padding: "10px",
               fontSize: "14px",
               borderRadius: "4px",
               border: "1px solid #ddd",
-              width: "275px",
-              backgroundColor: "aliceblue"
+              backgroundColor: "aliceblue",
             }}
           />
         </div>
@@ -79,10 +80,12 @@ const Login = ({ onLogin }) => {
               borderRadius: "5px",
               backgroundColor: "aliceblue",
               color: "0 4px 8px rgba(22, 20, 167, 0.79)",
-              border: "1px",
-              borderColor: "black",
+              border: "1px solid black",
               cursor: "pointer",
+              transition: "background-color 0.3s ease",
             }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "lightblue")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "aliceblue")}
           >
             Login
           </button>
